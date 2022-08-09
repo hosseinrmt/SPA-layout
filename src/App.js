@@ -1,15 +1,17 @@
 import { BrowserRouter, Route } from "react-router-dom";
-import Navigation from "./components/Navigation";
 import AboutUs from "./pages/AboutUsPage";
 import HomePage from "./pages/HomePage";
+import Layout from "./layout/Layout";
 import "./App.css";
+import Profile from "./pages/ProfilePage";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Layout>
       <Route path="/" exact={true} component={HomePage} />
       <Route path="/about-us" component={AboutUs} />
-    </BrowserRouter>
+      <Route path="/profile" component={Profile} />
+    </Layout>
   );
 };
 
