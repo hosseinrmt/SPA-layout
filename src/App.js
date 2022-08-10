@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Layout from "./layout/Layout";
 import "./App.css";
 import routes from "./routes";
@@ -6,9 +6,15 @@ import routes from "./routes";
 const App = () => {
   return (
     <Layout>
-      {routes.map((route) => (
-        <Route {...route} />
-      ))}
+      <Switch>
+        {routes.map((route) => (
+          <Route
+            path={route.path}
+            component={route.component}
+            exact={route.exact}
+          />
+        ))}
+      </Switch>
     </Layout>
   );
 };
