@@ -52,3 +52,12 @@ a {
 .aside {
     background-color: rgb(195, 225, 255) !important;
 }
+
+.activeTab {
+    color: blue;
+}
+
+.sideBar {
+    display: flex;
+    justify-content: space-between;
+}
