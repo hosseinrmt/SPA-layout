@@ -10,10 +10,10 @@ const routes = [
   { path: "/blogs/:id", component: Blog },
   { path: "/blogs", component: BlogPage },
   { path: "/about-us", component: AboutUs },
-  { path: "/post/:id?([0-9]+)", component: Post },
+  { path: "/post/:id([0-9]+)?", component: Post },
   { path: "/profile", component: Profile },
-  { component: NotFound },
   { path: "/", component: HomePage, exact: true },
+  { component: NotFound },
 ];
 
 export default routes;
